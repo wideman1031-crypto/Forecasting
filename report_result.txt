@@ -1,0 +1,19 @@
+1. Validate the Helformer prediction method
+            RMSE       MAPE       MAE
+Helformer   8.0665     0.010%     3.7670 (Paper)
+Test        44.9076    0.0665%  39.2340(Our validation)
+conclusion: difficult to use the current Helformer project.
+            lack of dataset
+            one type feature used
+            impossible seasonal prediction 
+
+2. Research the method to improve the performance of Helformer.
+method: used multi-input features, not reflect the seasonal trend
+result: 
+ModelType   RMSE       MAPE       MAE
+Helformer   8.0665      0.010%     3.7670 (Paper)
+LSTM        1879.59     5.76%       1549.30                          
+Our         1880.69    5.37%       1392.36 (Test) 
+conclusion: must reflect the seasonal trend
+            optimize the hyper-params of Helformer
+            sufficient dataset with various features
